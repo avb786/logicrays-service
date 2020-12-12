@@ -7,6 +7,7 @@ const mongoose = require('./middleware/db-connect');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const elearningRouter = require('./routes/e-learning');
+const cors = require('cors')
 
 
 var app = express();
@@ -14,7 +15,10 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
+app.use(cors({
+  origin: 'http://localhost:4200',
+  credentials: true
+}))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
