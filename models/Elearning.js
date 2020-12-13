@@ -12,12 +12,10 @@ const eLearningSchema = new mongoose.Schema({
     class: {
         type: Number,
         required: true,
-        unique: true,
     },
     chapter: {
         type: Number,
         required: true,
-        unique: true,
     },
     topic: {
         type: String,
