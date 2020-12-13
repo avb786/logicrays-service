@@ -3,9 +3,9 @@
 # To Run Service locally, commands:
     1. Write the command : nodemon
 
-# Curl Scripts
+# Curl Scripts 
 
-1. POST API: To Save to learning data 
+1. POST API curl: To Save to learning data 
     - curl --location --request POST 'https://logicrays-service.herokuapp.com/api/learnService/save/learning/data' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -19,7 +19,7 @@
 }'
 
 
-2. GET API: To get e-learning data with filter
+2. GET API curl: To get e-learning data with filter
 
  - curl --location -g --request GET 'localhost:3000/api/learnService/get/learning/filter/data?queryData={}'
 
